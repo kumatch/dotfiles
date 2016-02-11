@@ -1,0 +1,28 @@
+[user]
+	name = Yosuke Kumakura
+	email = kumatch@gmail.com
+[color]
+    ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+    grep = auto
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	bra = branch
+    diff = icdiff
+    di   = icdiff
+    diff_origin = diff
+[core]
+	pager = less
+	excludesfile = ~/dotfiles/.gitignore_commons
+	precomposeunicode = true
+[pull]
+    rebase = true
+[push]
+	default = upstream
+[ghq]
+    root = ~/src
