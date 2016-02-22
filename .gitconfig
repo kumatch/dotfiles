@@ -13,9 +13,7 @@
 	st = status
 	ci = commit
 	bra = branch
-    diff = icdiff
-    di   = icdiff
-    diff_origin = diff
+    df  = icdiff
 [core]
 	pager = less
 	excludesfile = ~/dotfiles/.gitignore_commons
