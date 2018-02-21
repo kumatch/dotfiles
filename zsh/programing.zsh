@@ -24,10 +24,8 @@ eval "$(rbenv init -)"
 #######################################################
 # go / golang
 #######################################################
-export GO15VENDOREXPERIMENT=1
-export GOPATH=$HOME
-# export GOROOT=/usr/local/Cellar/go/1.5.1/libexec
-# export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/golang
+export PATH=$PATH:$GOPATH/bin
 
 
 #######################################################
