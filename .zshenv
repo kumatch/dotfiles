@@ -26,3 +26,6 @@ export TZ=JST-9
 # export TERMCAP=/etc/termcap
 export TERMINFO=/usr/share/terminfo
 export TERM=xterm
+
+## 追加 env があれば
+[ -f $DOTFILES/zsh/env_ignores ] && source $DOTFILES/zsh/env_ignores
