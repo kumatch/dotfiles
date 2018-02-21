@@ -56,3 +56,9 @@ alias ext='extract'
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+######################################################################
+# direnv
+# https://github.com/direnv/direnv
+######################################################################
+eval "$(direnv hook zsh)"
