@@ -14,6 +14,8 @@
 	ci = commit
 	bra = branch
     df  = icdiff
+    push-up = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitpushupstream() { git push origin `gitbranchname`; }; gitpushupstream"
+    cop = "!gitbranchpeco() { git branch | peco; }; git checkout `gitbranchpeco`"
 [core]
 	pager = less
 	excludesfile = ~/dotfiles/.gitignore_commons
