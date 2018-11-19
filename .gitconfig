@@ -1,28 +1,38 @@
 [user]
-	name = Yosuke Kumakura
-	email = kumatch@gmail.com
+    name = Yosuke Kumakura
+    email = kumatch@gmail.com
 [color]
     ui = auto
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
     grep = auto
 [alias]
-	co = checkout
-	st = status
-	ci = commit
-	bra = branch
-    df  = icdiff
+    co = checkout
+    st = status
+    ci = commit
+    bra = branch
+    diff = icdiff
+    di   = icdiff
+    diff_origin = diff
+    branch-name = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitbranchname"
+    bra-name = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitbranchname"
     push-up = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitpushupstream() { git push origin `gitbranchname`; }; gitpushupstream"
     cop = "!gitbranchpeco() { git branch | peco; }; git checkout `gitbranchpeco`"
+    unstage = "reset HEAD"
+    log0 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    log1 = log --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset%C(black bold)%ar%Creset' --date=iso
+    log2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)― %an%C(reset)' --abbrev-commit
+    log3 = log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(black bold)%an, %ar%Creset'
+    cancel = reset --soft @~1
 [core]
-	pager = less
-	excludesfile = ~/dotfiles/.gitignore_commons
-	precomposeunicode = true
+    pager = less
+    excludesfile = ~/dotfiles/.gitignore_commons
+    precomposeunicode = true
 [pull]
     rebase = true
 [push]
-	default = upstream
+    default = upstream
 [ghq]
     root = ~/src
