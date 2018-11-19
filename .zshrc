@@ -200,6 +200,10 @@ elif [ `uname` = "Linux" ]; then
   [ -f $DOTFILES/zsh/linux.zsh ] && source $DOTFILES/zsh/linux.zsh
 fi
 
+# その他環境によって特別に追加されるもの
+[ -f $DOTFILES/zsh/external.zsh ] && source $DOTFILES/zsh/external.zsh
+
+
 # for file in bindkey prompt complete history screen alias individual_alias; do
 #   [ -f ~/.zsh/$file.zsh ]; source ~/.zsh/$file.zsh
 # done
