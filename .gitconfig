@@ -31,7 +31,10 @@
     precomposeunicode = true
 [pull]
     rebase = true
+    ff = only
 [push]
     default = upstream
 [ghq]
     root = ~/src
+[merge]
+    ff = false
