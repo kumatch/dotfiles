@@ -13,9 +13,8 @@
     st = status
     ci = commit
     bra = branch
-    diff = icdiff
+    df = icdiff
     di   = icdiff
-    diff_origin = diff
     branch-name = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitbranchname"
     bra-name = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitbranchname"
     push-up = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitpushupstream() { git push origin `gitbranchname`; }; gitpushupstream"
