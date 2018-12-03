@@ -2,6 +2,7 @@
 ;;;
 ;;; 構文チェックは flycheck の方に任せる。
 ;;; -------------------------------------------------------------------
+(add-hook 'go-mode-hook 'flycheck-mode)
 
 ;; セーブと共に go fmt
 (add-hook 'before-save-hook 'gofmt-before-save)

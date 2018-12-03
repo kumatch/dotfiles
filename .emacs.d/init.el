@@ -9,6 +9,9 @@
 (require 'cask)
 (cask-initialize)
 
+; Initialize
+(package-initialize)
+
 ;; (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 

@@ -6,6 +6,7 @@
 ;;
 ;;
 
+(require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; js2-mode で eslint による補助を受けるため、JSHint を無効にする

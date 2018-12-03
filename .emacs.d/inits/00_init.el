@@ -1,13 +1,13 @@
-
-
-;; 
-;; 
+;;
+;;
 ;; 初期設定
-;; 
+;;
 ;;
 
 ;; PATH
-(require 'exec-path-from-shell)
+;; (require 'exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 (let ((envs '("PATH" "GOPATH")))
   (exec-path-from-shell-copy-envs envs))
 
@@ -51,19 +51,3 @@
 
 ;; スタートページ非表示
 ;;(setq inhibit-startup-message t)
-
-
-
-
-
-(require 'package)
-
-; Add package-archives
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")) ; ついでにmarmaladeも追加
-
-; Initialize
-(package-initialize)
-
-; melpa.el
-(require 'melpa)
