@@ -1,0 +1,37 @@
+(global-set-key (kbd "C-c a")   'align)
+(global-set-key (kbd "C-c M-a") 'align-regexp)
+(global-set-key (kbd "C-h")     'backward-delete-char)
+;(global-set-key (kbd "C-c d")   'delete-indentation)
+;(global-set-key (kbd "M-g")     'goto-line)
+(global-set-key (kbd "C-S-i")   'indent-region)
+;(global-set-key (kbd "C-m")     'newline-and-indent)
+(global-set-key (kbd "C-t")     'next-multiframe-window)
+(global-set-key (kbd "M-<RET>") 'ns-toggle-fullscreen)
+(global-set-key (kbd "C-S-t")   'previous-multiframe-window)
+(global-set-key (kbd "C-/")     'undo)
+
+
+(global-unset-key (kbd "C-l"))               ; default 'recenter
+(define-key global-map [(control h)] 'delete-backward-char) ; default 'help-command
+;;(define-key global-map [(control l) (control c)] 'comment-or-uncomment-region)
+(define-key global-map [(control l) (control c)] 'comment-region)
+(define-key global-map [(control l) (control d)] 'dired-do-moccur)
+(define-key global-map [(control l) (control f)] 'moccur-grep-find)
+(define-key global-map [(control l) (control g)] 'goto-line)
+(define-key global-map [(control l) (control h)] 'help-command)
+(define-key global-map [(control l) (control i)] 'indent-region)
+(define-key global-map [(control l) (control l)] 'recenter) ; default C-l
+(define-key global-map [(control l) (control p)] 'lookup-pattern)
+(define-key global-map [(control l) (control o)] 'howm-mode)
+(define-key global-map [(control l) (control r)] 'rename-buffer)
+(define-key global-map [(control l) (control s)] 'svn-status)
+(define-key global-map [(control l) (control u)] 'lookup)
+(define-key global-map [(control l) (control v)] 'cvs-examine)
+(define-key global-map [(control l) (control y)] 'lookup-region)
+(define-key global-map [(control l) (control z)] 'japanese-zenkaku-region)
+(define-key global-map [(control l) (control x)] 'japanese-hankaku-region)
+;; (define-key global-map [(control l) (,)] 'howm-menu)
+
+(define-key global-map [(control i)] 'indent-for-tab-command)
+(global-set-key (kbd "M-y") 'yank-pop-forward)
+(global-set-key (kbd "C-M-y") 'yank-pop-backward)

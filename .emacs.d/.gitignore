@@ -1,0 +1,7 @@
+## dirs
+.cask
+auto-save-list
+
+## files
+ac-comphist.dat
+*.elc
