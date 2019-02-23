@@ -26,7 +26,7 @@ eval "$(rbenv init -)"
 #######################################################
 export GOPATH=$HOME/golang
 export PATH=$PATH:$GOPATH/bin
-
+export GO111MODULE=on
 
 #######################################################
 # perl, cpanm
