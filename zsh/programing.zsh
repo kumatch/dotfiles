@@ -27,6 +27,9 @@ eval "$(rbenv init -)"
 export GOPATH=$HOME/golang
 export PATH=$PATH:$GOPATH/bin
 
+# for goenv
+# GOPATHのコントロールをしてくれるな設定
+GOENV_DISABLE_GOPATH=1
 
 #######################################################
 # perl, cpanm
