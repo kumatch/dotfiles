@@ -28,6 +28,10 @@ export GOPATH=$HOME/golang
 export PATH=$PATH:$GOPATH/bin
 export GO111MODULE=on
 
+# for goenv
+# GOPATHのコントロールをしてくれるな設定
+export GOENV_DISABLE_GOPATH=1
+
 #######################################################
 # perl, cpanm
 #######################################################
