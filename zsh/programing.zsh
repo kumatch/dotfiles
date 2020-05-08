@@ -26,6 +26,9 @@ eval "$(anyenv init -)"
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
 
+# readlineで怒られるのでビルドする際に使う
+export RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
+
 #######################################################
 # go / golang
 #######################################################
