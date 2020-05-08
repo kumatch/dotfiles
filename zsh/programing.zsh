@@ -3,9 +3,9 @@
 #######################################################
 # nodebrew
 #######################################################
-if [[ -f $HOME/.nodebrew/nodebrew ]]; then
-    export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
+# if [[ -f $HOME/.nodebrew/nodebrew ]]; then
+#     export PATH=$HOME/.nodebrew/current/bin:$PATH
+# fi
 
 #######################################################
 # phpbrew
@@ -16,10 +16,15 @@ fi
 
 
 #######################################################
+# anyenv
+#######################################################
+eval "$(anyenv init -)"
+
+#######################################################
 # rbenv
 #######################################################
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 #######################################################
 # go / golang
