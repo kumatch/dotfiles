@@ -6,7 +6,8 @@
       (setq load-path (cons default-directory load-path))
       (normal-top-level-add-subdirs-to-load-path))))
 
-(require 'cask)
+;; homebrew で導入した emacs-cask を読み込む設定
+(require 'cask "/usr/local/opt/cask/cask.el")
 (cask-initialize)
 
 ; Initialize
