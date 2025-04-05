@@ -165,7 +165,7 @@ setopt no_tify
 
 # zsh-completions を読み込み対象に追加。
 # https://github.com/zsh-users/zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=($HOME/.zsh/zsh-completions $fpath)
 
 
 # zsh cdr, add-zsh-hook を有効に
@@ -177,7 +177,6 @@ zstyle ':chpwd:*' recent-dirs-max 500
 zstyle ':chpwd:*' recent-dirs-default true
 zstyle ':chpwd:*' recent-dirs-file "$HOME/.zsh-chpwd-recent-dirs"
 zstyle ':chpwd:*' recent-dirs-pushd true
-
 
 
 export DOTFILES=$HOME/dotfiles
@@ -207,4 +206,4 @@ fi
 # for file in bindkey prompt complete history screen alias individual_alias; do
 #   [ -f ~/.zsh/$file.zsh ]; source ~/.zsh/$file.zsh
 # done
-# if [ -s $HOME/.zsh_mine ] ; then source $HOME/.zsh_mine ; fi
+if [ -s $HOME/.zsh_mine ] ; then source $HOME/.zsh_mine ; fi

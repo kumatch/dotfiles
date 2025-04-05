@@ -8,7 +8,7 @@ fi
 umask 022
 
 # Path Setting
-path=(~/bin /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin)
+path=(~/bin ~/.local/bin /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin)
 
 #export CFLAGS="-g"
 

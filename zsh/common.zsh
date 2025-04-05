@@ -48,7 +48,7 @@ alias ext='extract'
 # z
 # https://github.com/rupa/z
 ######################################################################
-`brew --prefix`/etc/profile.d/z.sh
+#`brew --prefix`/etc/profile.d/z.sh
 
 ######################################################################
 # zsh-syntax-highlighting (install from homebrew)
@@ -57,8 +57,21 @@ if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; 
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+
+#######################################################
+# asdf
+#######################################################
+export ASDF_DATA_DIR=$HOME/.asdf
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
+
+# その他必要な変数を定義
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
 ######################################################################
 # direnv
 # https://github.com/direnv/direnv
 ######################################################################
-eval "$(direnv hook zsh)"
+[[ -x $(which direnv) ]] && eval "$(direnv hook zsh)"
