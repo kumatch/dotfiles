@@ -161,12 +161,14 @@ cdpath=($HOME)
 # バックグラウンドジョブが終了したらすぐに知らせる。
 setopt no_tify
 
-
-
 # zsh-completions を読み込み対象に追加。
 # https://github.com/zsh-users/zsh-completions
-fpath=($HOME/.zsh/zsh-completions $fpath)
-
+if [ `uname` = "Darwin" ]; then
+  fpath=($(brew --prefix)/share/zsh-completions $fpath)
+elif [ `uname` = "Linux" ]; then  
+  fpath=($HOME/.zsh/zsh-completions $fpath)
+fi
+autoload -Uz compinit && compinit
 
 # zsh cdr, add-zsh-hook を有効に
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
