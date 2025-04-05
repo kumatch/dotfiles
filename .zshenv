@@ -33,4 +33,4 @@ export TERM=xterm
 
 ## 追加 env があれば
 [ -f $DOTFILES/zsh/env_ignores ] && source $DOTFILES/zsh/env_ignores
-. "$HOME/.cargo/env"
+
