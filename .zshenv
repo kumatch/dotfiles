@@ -8,7 +8,11 @@ fi
 umask 022
 
 # Path Setting
-path=(~/bin ~/.local/bin /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin)
+path=(/usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin)
+if [ `uname` = "Darwin" ]; then
+  path=(/opt/homebrew/bin $path)
+fi
+path=(~/bin ~/.local/bin  $path)
 
 #export CFLAGS="-g"
 
@@ -29,3 +33,4 @@ export TERM=xterm
 
 ## 追加 env があれば
 [ -f $DOTFILES/zsh/env_ignores ] && source $DOTFILES/zsh/env_ignores
+. "$HOME/.cargo/env"

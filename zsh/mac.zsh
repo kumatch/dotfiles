@@ -120,14 +120,23 @@ alias readlink=greadlink
 alias pwd="pwd | tee >(pbcopy)"
 alias chrome="open -a Google\ Chrome"
 
+#######################################################
+# Rancher desktop
+#######################################################
+export PATH="/Users/kumakura-yosuke/.rd/bin:$PATH"
+
+#######################################################
+# grep
+#######################################################
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
 #######################################################
 # homebrew / cask
 #######################################################
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 
 #######################################################
 # MacTex
 #######################################################
 export PATH="$PATH:/usr/texbin"
-

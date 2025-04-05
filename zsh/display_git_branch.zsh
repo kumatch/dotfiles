@@ -35,5 +35,5 @@ function rprompt-git-current-branch {
 }
 
 PROMPT='`rprompt-git-current-branch`%~ $ '
-#RPROMPT='`rprompt-git-current-branch`%~ $ '
+#RPROMPT='`rprompt-git-current-branch`%~'
 #setopt transient_rprompt
