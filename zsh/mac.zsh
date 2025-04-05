@@ -1,8 +1,5 @@
 # -*- mode: shell-script -*-
 
-PROMPT="%B%F{green}# %f%b"
-SPROMPT="%r is correct? [n,y,a,e]: "
-
 # COPY
 alias pbp="pbpaste"
 function pb() {
