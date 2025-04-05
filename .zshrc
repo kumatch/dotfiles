@@ -164,7 +164,7 @@ setopt no_tify
 # zsh-completions を読み込み対象に追加。
 # https://github.com/zsh-users/zsh-completions
 if [ `uname` = "Darwin" ]; then
-  fpath=($(brew --prefix)/share/zsh-completions $fpath)
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 elif [ `uname` = "Linux" ]; then  
   fpath=($HOME/.zsh/zsh-completions $fpath)
 fi
