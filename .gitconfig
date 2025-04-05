@@ -21,7 +21,7 @@
     bra-name = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitbranchname"
     push-up = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitpushupstream() { git push origin `gitbranchname`; }; gitpushupstream"
     cop = "!gitbranchpeco() { git branch | peco; }; git checkout `gitbranchpeco`"
-    delete-merged-branches = "!git branch --merged | grep -vE '^\\|master$|develop$|staging$|deploy.$' | xargs -I % git branch -d %"
+    delete-merged-branches = "!git branch --merged | grep -vE '^\\|main$|master$|develop$|staging$|deploy.$' | xargs -I % git branch -d %"
     pl = !git fetch --prune && git delete-merged-branches
     unstage = "reset HEAD"
     log0 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
@@ -44,3 +44,17 @@
     root = ~/src
 [merge]
     ff = false
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+  insteadOf = git://github.com/
+  insteadOf = git://git@github.com/
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[init]
+	defaultBranch = main
+
+# DO "git secrets --register-aws --global" if [secrets] section is not exists.
+
