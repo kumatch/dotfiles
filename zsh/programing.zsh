@@ -13,3 +13,12 @@ fi
 #######################################################
 if [ -s $HOME/.cargo/env ] ; then source $HOME/.cargo/env ; fi
 
+######################################################
+# nodejs pnpm
+######################################################
+export PNPM_HOME="/Users/kumakura-yosuke/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
