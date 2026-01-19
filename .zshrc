@@ -83,13 +83,19 @@ function cdup() {
 HISTFILE=~/.zsh_history
 HISTSIZE=10000000
 SAVEHIST=10000000
+setopt append_history        # 複数のセッションで使用する時などにヒストリを置き換えないようにし、追加を行うようにする
+# setopt inc_append_history  # 入力されるとすぐにヒストリに追加する share_history と排他的な設定
+setopt share_history         # inc_append_history に加えて他のセッションで追加されたヒストリを利用できるようになる
+
+setopt hist_ignore_all_dups  # ヒストリにあるコマンドと重複する場合に古いコマンドはリストから削除する
+setopt hist_ignore_space     # コマンドラインの最初の文字がスペースである場合、ヒストリからコマンドを削除する
 
 # 履歴を表示させた際カーソルを行末にさせる
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
+bindkey "^p" history-beginning-search-backward-end  # コマンド入力中に Control + p でヒストリから後方に補完候補を検索して補完する
+bindkey "^n" history-beginning-search-forward-end   # コマンド入力中に Control + n でヒストリから前方に補完候補を検索して補完する
 
 # # 履歴をインクリメンタル検索 (peco.zsh による peco-select-history を使っているのでコメントアウト)
 # # bindkey '^R' history-incremental-pattern-search-backward
@@ -102,15 +108,9 @@ setopt auto_list
 setopt hist_ignore_space
 # 重複履歴は除く
 setopt hist_ignore_dups
-# 履歴に追加されるコマンド行が古いものと同じなら古いものを削除
-setopt hist_ignore_all_dups
-# 履歴の共有
-setopt share_history
 
 # 履歴ファイルに時刻を記録
 setopt extended_history
-# 履歴をインクリメンタルに追加
-setopt inc_append_history
 
 # ヒストリを呼び出してから実行する間に一旦編集可能
 setopt hist_verify
@@ -203,7 +203,6 @@ fi
 
 # その他環境によって特別に追加されるもの
 [ -f $DOTFILES/zsh/external.zsh ] && source $DOTFILES/zsh/external.zsh
-
 
 # for file in bindkey prompt complete history screen alias individual_alias; do
 #   [ -f ~/.zsh/$file.zsh ]; source ~/.zsh/$file.zsh
