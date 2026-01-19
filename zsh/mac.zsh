@@ -137,7 +137,7 @@ alias chrome="open -a Google\ Chrome"
 #######################################################
 # Rancher desktop
 #######################################################
-export PATH="/Users/kumakura-yosuke/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 
 #######################################################
 # grep
