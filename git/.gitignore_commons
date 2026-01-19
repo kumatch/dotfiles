@@ -1,0 +1,32 @@
+# Common ignore patterns
+_~
+_.bak
+.DS_Store
+Thumbs.db
+
+# JetBrains
+.idea
+
+# VSCode
+# https://raw.github.com/github/gitignore/b3ae3810f8b0f97f24cd61c2d3dd1b5089b91801/Global/VisualStudioCode.gitignore
+.vscode/\*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# direnv
+.envrc
+.direnv
+
+# Credentials and sensitive information
+**/credentials/*
+*_key
+*_token
+*.key
+*.cert
+*.p12
+*.pem
+
+# Claude Code - personal settings
+.claude/settings.local.json
