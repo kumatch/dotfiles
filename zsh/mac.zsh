@@ -131,7 +131,9 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 # homebrew / cask
 #######################################################
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
+export PATH="/opt/homebrew/Cellar/openssl@3/3.6.0/bin:$PATH"
 
 #######################################################
 # MacTex
