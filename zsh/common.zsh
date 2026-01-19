@@ -1,9 +1,5 @@
 # -*- mode: shell-script -*-
 
-# dircolors
-# [ -f $DOTFILES/misc/.dircolors ] && dircolors $DOTFILES/misc/.dircolors
-
-
 # less
 #   -i : 大文字がない限り ignore-case で検索する
 #   -g : 検索文字のハイライトをカーソル位置のみにする

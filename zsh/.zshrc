@@ -180,9 +180,6 @@ zstyle ':chpwd:*' recent-dirs-default true
 zstyle ':chpwd:*' recent-dirs-file "$HOME/.zsh-chpwd-recent-dirs"
 zstyle ':chpwd:*' recent-dirs-pushd true
 
-
-export DOTFILES=$HOME/dotfiles
-
 # include
 
 [ -f $DOTFILES/zsh/aliases-common.zsh ] && source $DOTFILES/zsh/aliases-common.zsh

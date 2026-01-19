@@ -1,5 +1,7 @@
 # -*- mode: shell-script -*-
 
+export DOTFILES=$HOME/dotfiles
+
 if [ "$TERM" = "dumb" ]
 then
    unsetopt zle
