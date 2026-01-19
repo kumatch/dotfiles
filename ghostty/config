@@ -1,0 +1,12 @@
+# 見た目
+theme = Monokai Pro
+font-size = 12
+
+# マウス関連
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 32
+
+# クリップボード関連
+copy-on-select = clipboard
+clipboard-write = allow
+clipboard-read = allow

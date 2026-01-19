@@ -1,10 +1,14 @@
-.PHONY: help git tmux zsh
+.PHONY: help ghostty git tmux zsh
 
 help:
 	@echo "Available tasks:"
+	@echo "  make ghostty"
 	@echo "  make git"
 	@echo "  make tmux"
 	@echo "  make zsh"	
+
+ghostty:
+	@bash ghostty/setup.sh
 
 git:
 	@bash git/setup.sh
