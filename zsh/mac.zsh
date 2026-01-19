@@ -1,6 +1,8 @@
 # -*- mode: shell-script -*-
 
-# COPY
+#
+# COPY / Clipboard
+#
 alias pbp="pbpaste"
 function pb() {
   if [ -t 0 ]; then
@@ -9,6 +11,21 @@ function pb() {
     pbcopy < /dev/stdin
   fi
 }
+
+# Control + k の動作を拡張する関数
+# ターミナルに関係なく kill-line して clipboard へ
+function kill-line-to-clipboard() {
+    # カーソルより右側の文字列（RBUFFER）を macOS のクリップボードに送る
+    # 改行が含まれないよう printf を使用
+    printf "%s" "$RBUFFER" | pbcopy
+
+    # 本来の kill-line 動作（カーソル以降の削除）を実行
+    zle kill-line
+}
+# ZLE ウィジェットとして関数を登録
+zle -N kill-line-to-clipboard
+# Control + k ( ^K ) に新しいウィジェットを割り当て
+bindkey '^K' kill-line-to-clipboard
 
 ##
 ## coreutils
@@ -136,6 +153,7 @@ export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 export PATH="/opt/homebrew/Cellar/openssl@3/3.6.0/bin:$PATH"
 
 #######################################################
-# MacTex
+# Ghostty
 #######################################################
-export PATH="$PATH:/usr/texbin"
+export PATH="/Applications/Ghostty.app/Contents/MacOS:$PATH"
+
