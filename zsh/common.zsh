@@ -60,17 +60,25 @@ fi
 #######################################################
 # asdf
 #######################################################
-export ASDF_DATA_DIR=$HOME/.asdf
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
+#export ASDF_DATA_DIR=$HOME/.asdf
+#export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
-fpath=(${ASDF_DIR}/completions $fpath)
-autoload -Uz compinit && compinit
+#fpath=(${ASDF_DIR}/completions $fpath)
+#autoload -Uz compinit && compinit
 
-# その他必要な変数を定義
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+#export PATH="$(go env GOBIN):$PATH"
+
+## その他必要な変数を定義
+#export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
 ######################################################################
 # direnv
 # https://github.com/direnv/direnv
 ######################################################################
 [[ -x $(which direnv) ]] && eval "$(direnv hook zsh)"
+
+######################################################################
+# mise
+# https://github.com/jdx/mise
+######################################################################
+eval "$(mise activate zsh)"
